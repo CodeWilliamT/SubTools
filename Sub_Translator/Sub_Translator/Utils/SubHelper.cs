@@ -254,8 +254,14 @@ namespace Utils
             foreach (var e in subLineModels)
             {
                 tmp.Clear();
+                if (e.Lines.Count == 0)
+                {
+                    e.Lines.Add("");
+                    e.RawLines.Add("");
+                    continue;
+                }
                 tmp.Append(e.Lines[0]);
-                for (int i = 1; i < e.Lines.Count(); i++)
+                for (int i = 1; i < e.Lines.Count; i++)
                 {
                     tmp.Append(" " + e.Lines[i]);
                 }
@@ -264,12 +270,13 @@ namespace Utils
 
                 tmp.Clear();
                 tmp.Append(e.RawLines[0]);
-                for (int i = 1; i < e.RawLines.Count(); i++)
+                for (int i = 1; i < e.RawLines.Count; i++)
                 {
                     tmp.Append(" " + e.RawLines[i]);
                 }
                 e.RawLines.Clear();
                 e.RawLines.Add(tmp.ToString());
+
             }
             return subLineModels;
         }

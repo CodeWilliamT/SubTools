@@ -129,7 +129,7 @@ namespace Sub_Translator
                 }
                 catch(Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message+"\n"+ex.StackTrace);
                 }
                 this.BeginInvoke(new MethodInvoker(() =>
                 {
