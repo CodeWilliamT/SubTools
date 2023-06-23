@@ -129,11 +129,13 @@ namespace Utils
                     substr = substr.Replace("<i>", "").Replace(@"</i>", "").Replace("&", "and");
                     slm.RawLines.Add(substr);
                     substr = sr.ReadLine();
-                    while (substr != null&&substr != num.ToString()&& substr != "")
+                    while (substr != null&&substr != num.ToString())
                     {
+                        if (substr == "") goto _end;
                         slm.Lines.Add(substr);
                         substr = substr.Replace("<i>", "").Replace(@"</i>", "").Replace("&", "and");
                         slm.RawLines.Add(substr);
+                        _end:
                         substr = sr.ReadLine();
                     }
                     rst.Add(slm);
