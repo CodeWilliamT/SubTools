@@ -88,7 +88,6 @@ namespace Utils
                 default:
                     {
                         throw new Exception("It's not a supported sub type.");
-                        break;
                     }
             }
             subLineModels = switchSubLines(subLineModels);
@@ -130,7 +129,7 @@ namespace Utils
                     substr = substr.Replace("<i>", "").Replace(@"</i>", "").Replace("&", "and");
                     slm.RawLines.Add(substr);
                     substr = sr.ReadLine();
-                    while (substr != null&&substr != num.ToString())
+                    while (substr != null&&substr != num.ToString()&& substr != "")
                     {
                         slm.Lines.Add(substr);
                         substr = substr.Replace("<i>", "").Replace(@"</i>", "").Replace("&", "and");

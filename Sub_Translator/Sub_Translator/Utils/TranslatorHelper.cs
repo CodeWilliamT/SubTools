@@ -54,8 +54,8 @@ namespace Utils
         public static readonly string[] TranslateServer = { "Google","Bing","Baidu" };
 
         //Private constent info
-        private static readonly Dictionary<string,string> ContactMark = new Dictionary<string, string> { { TranslateServer[0], "\r\n" }, { TranslateServer[1], "\r\n" }, { TranslateServer[2], "\n" } };
-        private static readonly string[] SpiltMark = { "\\r\\n" ,"\\n"};
+        private static readonly Dictionary<string,string> ContactMark = new Dictionary<string, string> { { TranslateServer[0], "\r\n\r\n" }, { TranslateServer[1], "\r\n" }, { TranslateServer[2], "\n" } };
+        private static readonly string[] SpiltMark = { "\\r\\n" , "\\n"};
         private static readonly Dictionary<string, int> LimitRequestDelay = new Dictionary<string, int> { { TranslateServer[0], 1100 }, { TranslateServer[1], 1100 }, { TranslateServer[2], 5500 } };
         private const int TransLinesMax = 9000;
         //Baidu Fanyi Server Info
@@ -63,7 +63,7 @@ namespace Utils
         private static readonly string baiduKey = "TXwFnIYmM5gUY58OTKi8";
 
         //Azure Bing Server Info
-        private static readonly string bingKey = "1c6aac0dcdd04bd19f79ed51109540d4";
+        private static readonly string bingKey = "3a44ac4593054d3b838e98542511ab65";//"1c6aac0dcdd04bd19f79ed51109540d4";
         private static readonly string endpoint = "https://api.cognitive.microsofttranslator.com/";
         // Add your location, also known as region. The default is global.
         // This is required if using a Cognitive Services resource.

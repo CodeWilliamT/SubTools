@@ -188,6 +188,8 @@ namespace Sub_Translator
                 {
                     foreach (FileInfo f in di_FileInfo)
                     {
+                        if (!SubHelper.subExs.Contains(f.Extension))
+                            continue;
                         string savepath = savefolder + @"\" +
                             f.FullName.Substring(tbSubfoldername.Text.Length, f.FullName.Length - tbSubfoldername.Text.Length - f.Extension.Length) + "." + ((SubHelper.SubType)idx_Format).ToString();
                         Directory.CreateDirectory(savepath.Substring(0, savepath.Length - f.Name.Length));
@@ -197,7 +199,7 @@ namespace Sub_Translator
                         }
                         catch(Exception ex)
                         {
-                            MessageBox.Show(f.FullName+"\n"+ex.Message);
+                            MessageBox.Show(f.FullName+"\n"+ex.Message+ex.StackTrace);
                         }
 
                         this.BeginInvoke(new MethodInvoker(() =>
