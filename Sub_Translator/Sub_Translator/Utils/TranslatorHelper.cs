@@ -56,7 +56,7 @@ namespace Utils
         //Private constent info
         private static readonly Dictionary<string,string> ContactMark = new Dictionary<string, string> { { TranslateServer[0], "\r\n\r\n" }, { TranslateServer[1], "\r\n" }, { TranslateServer[2], "\n" } };
         private static readonly string[] SpiltMark = { "\\r\\n" , "\\n"};
-        private static readonly Dictionary<string, int> LimitRequestDelay = new Dictionary<string, int> { { TranslateServer[0], 1100 }, { TranslateServer[1], 1100 }, { TranslateServer[2], 5500 } };
+        private static readonly Dictionary<string, int> LimitRequestDelay = new Dictionary<string, int> { { TranslateServer[0], 2600 }, { TranslateServer[1], 16300 }, { TranslateServer[2], 5500 } };
         private const int TransLinesMax = 9000;
         //Baidu Fanyi Server Info
         private static readonly string baiduAppId = "20220430001197782";
