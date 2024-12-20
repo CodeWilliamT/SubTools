@@ -246,6 +246,7 @@ namespace Utils
                     srtTxt.Append(SubModel[i].RawLines[j] + "\n");
                     assTxt.Append(@"\N" + SubModel[i].RawLines[j]);
                 }
+                srtTxt.Append("\n");
                 assTxt.Append("\n");
             }
             return new List<StringBuilder>() { assTxt, srtTxt };

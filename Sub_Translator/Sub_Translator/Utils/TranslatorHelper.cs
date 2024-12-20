@@ -63,7 +63,7 @@ namespace Utils
         private static readonly string baiduKey = "TXwFnIYmM5gUY58OTKi8";
 
         //Azure Bing Server Info
-        private static readonly string bingKey = "3a44ac4593054d3b838e98542511ab65";//"1c6aac0dcdd04bd19f79ed51109540d4";
+        private static readonly string bingKey = "1c6aac0dcdd04bd19f79ed51109540d4";//"3a44ac4593054d3b838e98542511ab65";
         private static readonly string endpoint = "https://api.cognitive.microsofttranslator.com/";
         // Add your location, also known as region. The default is global.
         // This is required if using a Cognitive Services resource.

@@ -230,6 +230,8 @@ namespace Utils
 
             for (int i = 0; i < SubModel.Count(); i++)
             {
+                if (SubModel[i].RawLines.Count == 0)
+                    continue;
                 srtTxt.Append((i + 1).ToString() + "\n");
                 srtTxt.Append(SubModel[i].SrtBeginTime + " --> " + SubModel[i].SrtEndTime + "\n");
                 srtTxt.Append(SubModel[i].RawLines[0] + "\n");
@@ -239,6 +241,7 @@ namespace Utils
                     srtTxt.Append(SubModel[i].RawLines[j] + "\n");
                     assTxt.Append(@"\N" + SubModel[i].RawLines[j]);
                 }
+                srtTxt.Append("\n");
                 assTxt.Append("\n");
             }
             return new List<StringBuilder>() { assTxt, srtTxt };
